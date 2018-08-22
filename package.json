@@ -1,0 +1,23 @@
+{
+  "name": "ejs",
+  "version": "1.0.0",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "connect-mongo": "^2.0.1",
+    "cookie-parser": "^1.4.3",
+    "ejs": "~1.0.0",
+    "express": "^4.6.1",
+    "express-session": "^1.15.6",
+    "mongodb": "^2.2.33",
+    "mongoose": "^5.0.9",
+    "monk": "^6.0.5",
+    "nodemon": "^1.17.2",
+    "session": "^0.1.0"
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

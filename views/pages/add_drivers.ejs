@@ -1,0 +1,94 @@
+<html>
+<head><title>Add Drivers</title>
+<link rel="stylesheet" href ="addDrivers.css" type="text/css">
+<link rel="shortcut icon" href="bus.ico">
+<link rel="stylesheet" href="w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="stylesheets\font-awesome-4.7.0\css\font-awesome.min.css">
+</head>
+
+<header>
+    <% include ../partials/newHeader %>
+</header>
+
+<style >
+  
+
+  .loginBox input[type="text"],
+  .loginBox input[type="Password"],
+  .loginBox input[type="textbox-n"],
+  .loginBox input[type="date"],
+  .loginBox input[type="email"]{
+
+    border: none;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    height: 35px;
+    background: transparent;
+    color: white;
+    font-size: 16px;
+
+  }
+  
+  body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+
+  .w3-bar .w3-button {
+    padding: 16px;
+  }
+
+  p{
+
+    color: lightgray;
+
+  }
+
+</style>
+
+<body>
+
+<div id="form-main" style="margin-top: 50px">
+  <div id="form-div">
+    <label class="w3-center"><p style="font-size: 20px"><b>Enter Driver Details: </b></p></label>
+    <form class="w3-container loginBox" method="post" id="form1" action="/adddriver">
+       <input name="uid" type="hidden" value="geronimo" id="uid">
+
+      <p class="name">
+        <input name="name" type="text" class="validate[required] w3-input w3-border w3-round w3-gray w3-opacity-min" placeholder="Name" id="name" required />
+      <p class="email">
+        <input name="email" type="email" class="validate[required] w3-input w3-border w3-round w3-gray w3-opacity-min" placeholder="E-Mail" id="email" required />
+      </p>
+      <p class="mobile">
+        <input name="mobile" type="text" class="validate[required] w3-input w3-border w3-round w3-gray w3-opacity-min" placeholder="Mobile Number" id="mobile" required />
+      </p>
+      
+      
+      <p class="dob">
+        <input placeholder="D.O.B"  type="textbox-n" name="dob" class="validate[required] w3-input w3-border w3-round w3-gray w3-opacity-min"  onfocus="(this.type='date')"  onblur="(this.type='text')" id="dob" required  />
+      </p>
+      
+      <p class="address">
+        <input name="address" type="text" class="validate[required] w3-input w3-border w3-round w3-gray w3-opacity-min" id="address", placeholder="Correspondence Address" required />
+      </p>
+
+
+      <p class="aadharNumber">
+        <input placeholder="Aadhar Number"  type="text" name="aadharNumber"  class="validate[required] w3-input w3-border w3-round w3-gray w3-opacity-min" id="aadharNumber" required />
+      </p>
+      
+      <p class="licenseNumber">
+        <input placeholder="License Number"  type="text" name="licenseNumber"  class="validate[required] w3-input w3-border w3-round w3-gray w3-opacity-min" id="licenseNumber" required />
+      </p>
+
+      <p class="bloodGroup">
+        <input placeholder="Blood Group"  type="text" name="bloodGroup"  class="validate[required] w3-input w3-border w3-round w3-gray w3-opacity-min" id="bloodGroup" required />
+      </p>
+
+      
+      <div class="">
+        <input type="submit" class="w3-center w3-round w3-padding w3-light-gray" value="Submit     >" id=""/>
+      </div>
+    </form>
+  </div>
+
+  </body>
+  </html>

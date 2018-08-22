@@ -1,0 +1,46 @@
+<html>
+<head><title>Login to Humsafar</title>
+<link rel="stylesheet" href ="landingPage.css" type="text/css">
+<link rel="stylesheet" href="w3.css">
+<link rel="stylesheet" href="stylesheets\font-awesome-4.7.0\css\font-awesome.min.css">
+<style>
+.lg-white{
+	color:white;
+}
+</style>
+<link rel="shortcut icon" href="bus.ico" />
+
+</head>
+<body>
+	<div class="w3-top">
+    <div class="w3-bar w3-white w3-card w3-opacity-min" id="myNavbar">
+      <a href="/home"><img src="humsafar2.png" ></a>
+      <a href="/login" class="w3-bar-item w3-button w3-right"><h5><i class="fa fa-sign-in" aria-hidden="true"></i> Log In</h5></a>
+      <a href="/signup" class="w3-bar-item w3-button w3-right"><h5><i class="fa fa-user-plus" aria-hidden="true"></i> Sign Up</h5></a>  
+    </div>   
+  </div>
+
+  <input type="radio" checked id="toggle--login" name="toggle" class="ghost" />
+  <input type="radio" id="toggle--signup" name="toggle" class="ghost" />
+
+  <form class="form form--login framed" method="post" action='/log_in'>
+    <input type="email" placeholder="Email" class="input input--top" name="email" required  />
+    <input type="password" placeholder="Password" class="input" name="pass"  required />
+    <input type="submit" value="Log in" class="input input--submit" />
+    
+    <div class="lg-white"><label for="toggle--signup" class="text text--small text--centered"><h3>New? <a href='/signup'>Sign Up</a></h3></label></div>
+  </form>
+
+  <div class="legal">
+    <a class="text text--small text--border-right" href="javascript:;">Terms</a>
+    <a class="text text--small text--border-right" href="javascript:;">Privacy</a>
+    <a class="text text--small" href="javascript:;">Password help</a>
+  </div>
+
+  <div class="photo-cred">
+    <a class="text text--small" title="Check out their blog." target="_blank">Made by Team NP Complete</a>
+  </div>
+
+  <div class="fullscreen-bg"></div>
+  </body>
+  </html>

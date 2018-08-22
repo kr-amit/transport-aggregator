@@ -1,0 +1,96 @@
+<html>
+<head><title>Your Vehicles</title>
+<link rel="stylesheet" href ="allVehicles.css" type="text/css">
+<link rel="stylesheet" href="w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="stylesheets\font-awesome-4.7.0\css\font-awesome.min.css">
+<link rel="shortcut icon" href="bus.ico">
+<script type="text/javascript" href="vehicles.js"></script>
+</head>
+<header>
+    <% include ../partials/newHeader %>
+</header>
+
+<style>
+  
+  .srcbx{
+    width: 350px;
+  }
+
+</style>
+
+<body>
+<br>
+<br>
+<form method="post" action="/filterVehicles" style="margin-top: 70px">
+	<input type="text" id="default" style=" float: left;" list="numbers" placeholder="Enter vehicle number to Search" class="val srcbx w3-input w3-border w3-round w3-gray w3-opacity-min" name="val">
+  
+  <datalist id="numbers" class="numbers" name="number">
+    <% if (Array.isArray(record) ){ %>
+      	<% record.forEach( function( prd ) { %>
+      		<option value='<%= prd.registrationNumber %>' >
+    <% })} %>
+  </datalist>
+  <input type="submit"  class="w3-center w3-round w3-padding w3-light-gray" value="Search   >" id=""/>
+  <p><a href="/viewVehicles" class="w3-button w3-round w3-padding w3-light-gray">Show All </a></p>
+</form>
+
+
+
+	<section>
+  <!--for demo wrap-->
+  <h1>Registered Vehicles List</h1>
+  <div class="tbl-header w3-card w3-table w3-border w3-dark-grey w3-opacity-min">
+    <table cellpadding="0" cellspacing="0" border="0">
+      <thead>
+        <tr>
+          <th>Reg No.</th>
+          <th>Owner</th>
+          <th>Purchased In</th>
+          <th> Track </th>
+          <th> Remove </th>
+        </tr>
+      </thead>
+    </table>
+  </div>
+  
+
+  <div class="tbl-content w3-card w3-table w3-border w3-grey">
+    <table cellpadding="0" cellspacing="0" border="0">
+      <tbody>
+    <% if (Array.isArray(record) ){ %>
+      	<% record.forEach( function( prd ) { %>
+        <tr>
+          <td><%= prd.registrationNumber %></td>
+          <td><%= prd.ownerName %></td>
+          <td><%= prd.yearOfPurchase %></td>
+          <td> <a href="#" class="w3-button w3-round w3-padding w3-teal"> Track</a></td>
+          <td> <a class="w3-button w3-round w3-padding w3-teal" href="/remove?id=<%= prd.registrationNumber %>" onclick="myfunction()"> Remove</a></td>
+        </tr>
+    <% })} else { %>
+    	<tr>
+          <td><%= prd.registrationNumber %></td>
+          
+          <td><%= prd.ownerName %></td>
+          <td><%= prd.yearOfPurchase%></td>
+          <td> <a href="#" class="w3-button w3-round w3-padding w3-teal"> Track</a></td>
+          <td> <a class="w3-button w3-round w3-padding w3-teal" href="/remove?id=<%= prd.registrationNumber %>" onclick="myfunction()"> Remove</a></td>
+        </tr>
+    	<% }; %>
+
+        </tbody>
+    
+    </table>
+  </div>
+
+
+  </section>
+  <script>
+  	function myfunction(){
+  		alert("please refresh to see updated list");
+
+  	  	};
+  </script>
+
+</body>
+</html>

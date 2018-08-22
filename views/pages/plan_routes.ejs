@@ -1,0 +1,72 @@
+<html>
+<head><title> add vehicle data</title>
+<link rel="stylesheet" href ="planRoutes.css" type="text/css">
+ <script
+  src="https://code.jquery.com/jquery-2.2.4.min.js"
+  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+  crossorigin="anonymous"></script>
+
+</head>
+<header>
+    <% include ../partials/newHeader %>
+</header>
+<body>
+<div id="map" style="margin-top: 100px"></div>
+  <div class="row" style="float: right;display: table;">
+      <div class="column">
+          <div id="form-main">
+            <div id="form-div">
+              <form class="form" style="margin-top: 90px"  method="post" id="form1" action="/registerRoute">
+                
+
+                <p class="VehicleRegNumber">
+                  <input name="registrationNumber" class="validate[required] feedback-input" placeholder="Vehicle registration number" id="VehicleRegNumber" required />
+
+                <input id="start" name ="source" class="controls validate[required] feedback-input" type="text" placeholder="Enter Source" required >
+                  <br>            
+
+                  <p class="waypoints">
+                    <input placeholder="Enter Number of waypoints" type="number"  onfocusout="createWay()" class="validate[required] feedback-input" id="waypoints"/>
+                  </p> 
+                <b id="showway">Waypoints:</b>
+                <div id="directions-panel" class="feedback-input"></div>
+                
+                <input id="end" name="destination" class="controls validate[required] feedback-input" type="text" placeholder="Enter destination" required />
+                <!--<select id="end" class="validate[required] feedback-input">-->
+                <!--  <option value="Silicon Hills, Patia, Near Infocity, Bhubaneswar, Odisha 751024">Silicon Institute of Technology</option>-->
+                <!--  <option value="Market Building, Unit-2, Ashok Nagar, Bhubaneswar, Odisha 751001">Market Building</option>-->
+                <!--  <option value="Master Canteen , Bhubaneswar">Master Canteen , Bhubaneswar</option>-->
+                <!--  </select>-->
+                      
+                        
+                <div class="submit">
+                        
+                  <input type="button"  value="SEEMAP" class="button-blue ease" id="plansubmit" onclick="route()">
+                </div>
+                <div class="submit">
+                        
+                  <input type="reset"  value="Clear" class="button-blue ease" >
+                </div>
+            
+
+                      <div class="submit">
+                        
+                        <input type="submit" value="REGISTER" class="button-blue ease">
+                      </div>
+                      
+                   
+                  
+                    </form>
+                
+       </div>
+      </div>
+   </div>
+
+      <script src="map.js"></script>
+  </div>
+
+
+   <script async defer    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBPNIPaFZlCma_UalBEvbdyO7oPSSwQPS8&libraries=places&callback=start"> </script>
+
+  </body>
+  </html>

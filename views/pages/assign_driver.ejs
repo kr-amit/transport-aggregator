@@ -1,0 +1,52 @@
+<html>
+<head><title> All vehicles</title>
+<link rel="stylesheet" href ="allVehicles.css" type="text/css">
+
+</head>
+<header>
+    <% include ../partials/newHeader %>
+</header>
+
+<style >
+  
+  .srcbx{
+    width: 350px;
+  }
+
+</style>
+
+<body>
+  <br>
+
+<form style="margin-top: 90px" method="post" action="/registerVehicleDriver">
+  <input name="email" type="hidden" value="n" />
+  <input name="uid" type="hidden" value="n" />
+<input type="text" id="default" list="numbers" style="float: left;" placeholder="Enter Driver Name to Search" class="val srcbx w3-input w3-border w3-round w3-gray w3-opacity-min" name="val" required>
+  
+  <datalist id="numbers" class="numbers" name="number">
+    <% if (Array.isArray(driver) ){ %>
+      	<% driver.forEach( function( prd ) { %>
+      		<option value='<%= prd.name %>' >
+    <% })} %>
+  </datalist>
+
+<input type="text" id="default" list="vehicles" placeholder="Enter Vehicle Number to Search" class="veh srcbx w3-input w3-border w3-round w3-gray w3-opacity-min" name="veh" required>
+  
+  <datalist id="vehicles" class="vehicles" name="vehicles">
+    <% if (Array.isArray(vehicle) ){ %>
+      	<% vehicle.forEach( function( prd ) { %>
+      		<option value='<%= prd.registrationNumber %>' >
+    <% })} %>
+  </datalist>
+
+  <br>
+  <input type="submit" class="w3-center w3-round w3-padding w3-light-gray" value="Submit   >" onclick="myFunction()" placeholder="assign">
+</form>
+<script>
+  function myFunction(){
+    alert('Record inserter successfully');
+  }
+</script>
+<script type="text/javascript" src="javascripts/assignDrivers.js"></script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<html>
+<head><title>Add Vehicles to your Fleet</title>
+<link rel="stylesheet" href ="addVehicles.css" type="text/css">
+<link rel="shortcut icon" href="bus.ico">
+<link rel="stylesheet" href="w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="stylesheets\font-awesome-4.7.0\css\font-awesome.min.css">
+</head>
+
+<header>
+    <% include ../partials/newHeader %>
+</header>
+
+<style>
+
+  body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+  
+  .loginBox input[type="text"],
+  .loginBox input[type="Password"],
+  .loginBox input[type="textbox-n"],
+  .loginBox input[type="date"]{
+
+    border: none;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    height: 50px;
+    background: transparent;
+    color: white;
+    font-size: 16px;
+
+  }
+
+  p{
+
+    color: lightgray;
+
+  }
+
+  .w3-bar .w3-button {
+    padding: 16px;
+  }
+
+</style>
+
+
+
+<div id="form-main" style="margin-top: 80px">
+  <div id="form-div">
+    <label class="w3-center"><p style="font-size: 20px"><b>Enter Vehicle Details: </b></p></label>
+    <form class="w3-container loginBox" method="post" id="form1" action="/addvehicle">
+      
+      <input name="uid" type="hidden" value="geronimo" id="uid">
+
+      <p class="registrationNumber">
+        <input name="registrationNumber" type="text" class="validate[required,length[7,8] w3-input w3-border w3-round w3-gray w3-opacity-min" placeholder="Registration Number" id="registrationNumber" required / >
+      </p>
+    
+      <p class="ownerName">
+        <input name="ownerName" type="text" class="validate[required,custom[onlyLetter],length[4,30]] w3-input w3-border w3-round w3-gray w3-opacity-min" id="ownerName" placeholder="Owner Name" required />
+      </p>
+      
+      <p class="yearOfPurchase">
+        <input name="yearOfPurchase" type="text" class="validate[required,length[4,4]] w3-input w3-border w3-round w3-gray w3-opacity-min" id="yearOfPurchase", placeholder="Year of Purchase" required />
+      </p>
+
+
+     
+      
+      
+      <div class="">
+        <input type="submit" class="w3-center w3-round w3-padding w3-light-gray" value="Submit     >" id=""/>
+      </div>
+    </form>
+  </div>
+
+  </body>
+  </html>

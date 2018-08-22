@@ -1,0 +1,35 @@
+<html>
+<head><title> add vehicle data</title>
+<link rel="stylesheet" href ="landingPage.css" type="text/css">
+
+</head>
+<body>
+  <form class="form form--signup framed" method="post" action="/fillProfile">
+  
+
+    <input type="text" placeholder="Full Name" class="input input--top" name="name" required />
+    <input type="text" placeholder="company name" class="input" name="cname" required />
+    <input type="text" placeholder="Correspondance Address" class="input" name="address" required/>
+    <select name="gender" class="input">
+      <option value="male">Male</option>
+      <option value="female">Female</option>
+    </select>
+    <input type="date" placeholder="compnay founded in" name="founded" onfocus="(this.type='date')"  onblur="(this.type='text')"" class="input" required/>
+    <input type="submit" value="Sign up" class="input input--submit" />
+    
+    <label for="toggle--login" class="text text--small text--centered">Not new? <a href='/login'>Proceed</a></label>
+  </form>
+
+  <div class="legal">
+    <a class="text text--small text--border-right" href="javascript:;">Terms</a>
+    <a class="text text--small text--border-right" href="javascript:;">Privacy</a>
+    <a class="text text--small" href="javascript:;">Password help</a>
+  </div>
+
+  <div class="photo-cred">
+    <a class="text text--small" title="Check out their blog."  target="_blank">Made by Team NP Complete</a>
+  </div>
+
+  <div class="fullscreen-bg"></div>
+  </body>
+  </html>

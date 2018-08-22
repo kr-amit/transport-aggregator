@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="shortcut icon" href="bus.ico" />
+</head>
+<title>Humsafar - Your Travel Companion</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="w3.css">
+<link rel="stylesheet" href="stylesheets\font-awesome-4.7.0\css\font-awesome.min.css">
+<style>
+
+footer {
+
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
+body, html {
+    height: 100%;
+    color: #777;
+    line-height: 1.8;
+}
+
+/* Create a Parallax Effect */
+.bgimg-1, .bgimg-2, .bgimg-3 {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* First image (Logo. Full height) */
+.bgimg-1 {
+    background-image: url('home_image.jpg');
+    min-height: 100%;
+}
+
+
+/* Third image (Contact) */
+.bgimg-3 {
+    background-image: url("3.jpg");
+    min-height: 400px;
+}
+
+.w3-wide {letter-spacing: 10px;}
+.w3-hover-opacity {cursor: pointer;}
+
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 1024px) {
+    .bgimg-1, .bgimg-2, .bgimg-3 {
+        background-attachment: scroll;
+    }
+}
+</style>
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-card w3-opacity-min" id="myNavbar">
+    <a href="/home"><img src="humsafar2.png" ></a>
+    <a href="/login" class="w3-bar-item w3-button w3-right"><h5><i class="fa fa-sign-in" aria-hidden="true"></i> Log In</h5></a>
+    <a href="/signup" class="w3-bar-item w3-button w3-right"><h5><i class="fa fa-user-plus" aria-hidden="true"></i> Sign Up</h5></a>
+    
+  </div>
+      
+</div>
+
+<!-- First Parallax Image with Logo Text -->
+<div class="bgimg-1 w3-display-container" id="home">
+  <div class="w3-display-middle" style="white-space:nowrap;">
+    <span class="w3-center w3-padding-large w3-white w3-xlarge w3-wide w3-opacity-min">Humsafar<span class="w3-hide-small"> - </span>Your Travel Companion</span>
+  </div>
+</div>
+
+<!-- Container (About Section) -->
+<div class="w3-content w3-container w3-padding-64" id="about">
+  <h3 class="w3-center">ABOUT US</h3>
+  <p class="w3-center"><em>Creating a smarter world</em></p>
+  <p>
+
+  A platform that aims to create smart and resposive mobility solutions. Our goal is to bring public transport on par with 
+  private vehicles. Urban mobility is essential to rapid and sustainable growth and we want to facilitate hassle free movement 
+  of people inside our cities.
+
+  </p>
+<!-- Footer -->
+<footer>
+    <% include ../partials/footer %>
+</footer>
+ 
+<script>
+// Used to toggle the menu on small screens when clicking on the menu button
+function toggleFunction() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+</script>
+
+
+</body>
+</html>
